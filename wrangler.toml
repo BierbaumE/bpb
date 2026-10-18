@@ -1,0 +1,17 @@
+name = "bpb"
+compatibility_date = "2026-10-01"
+
+# Vorschau-Adresse bpb.bpbrothers.workers.dev bleibt zusätzlich erreichbar
+workers_dev = true
+
+[assets]
+directory = "./public"
+
+# Dach-Domain (Zone liegt im selben Cloudflare-Konto)
+[[routes]]
+pattern = "bierbaumperformancebrothers.com"
+custom_domain = true
+
+[[routes]]
+pattern = "www.bierbaumperformancebrothers.com"
+custom_domain = true
