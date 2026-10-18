@@ -108,6 +108,28 @@ h1 {
   font-size: 1.15rem;
 }
 
+.demos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.demos a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 9px 14px;
+  border: 1px solid rgba(246, 241, 255, .35);
+  border-radius: 999px;
+  font-size: .95rem;
+}
+
+.demos a:hover,
+.demos a:focus-visible {
+  background: rgba(246, 241, 255, .14);
+  border-color: var(--text);
+}
+
 footer {
   display: flex;
   flex-wrap: wrap;
