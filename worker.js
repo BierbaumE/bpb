@@ -52,7 +52,7 @@ function loginSeite(fehler) {
 <main>
   <h1>Login</h1>
   <form method="post" action="/login">
-    <input id="pw" name="pw" type="password" placeholder="Passwort" autocomplete="current-password" autofocus required>
+    <input id="pw" name="pw" type="password" placeholder="Passwort" autocomplete="current-password" autocapitalize="none" autocorrect="off" spellcheck="false" autofocus required>
     <button type="submit">Weiter</button>
   </form>
   ${meldung}
@@ -85,7 +85,7 @@ export default {
       if (request.method === "POST") {
         let pw = "";
         try {
-          pw = String((await request.formData()).get("pw") || "");
+          pw = String((await request.formData()).get("pw") || "").trim();
         } catch (e) {
           return loginSeite(true);
         }
