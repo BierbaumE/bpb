@@ -1,11 +1,14 @@
 name = "bpb"
 compatibility_date = "2026-10-01"
+main = "worker.js"
 
 # Vorschau-Adresse bpb.bpbrothers.workers.dev bleibt zusätzlich erreichbar
 workers_dev = true
 
 [assets]
 directory = "./public"
+binding = "ASSETS"
+run_worker_first = true
 
 # Dach-Domain (Zone liegt im selben Cloudflare-Konto)
 [[routes]]
