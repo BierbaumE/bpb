@@ -1,6 +1,6 @@
 // Vorläufiger Passwortschutz für die Vorschau (nur Hash im Code, kein Geheimnis im Repo).
 // Benutzername beliebig, Passwort wird per Browser-Dialog (HTTP Basic) abgefragt.
-const PW_SHA256 = "aac74112139fbfee8171defea41a8cc55fd31ae15c801061eb7a2d55fabf7cf2";
+const PW_SHA256 = "9235b16e379f9f9263b9b0c9afc384d003183fd2ced9855f8bf01d390efe62f6";
 
 async function sha256Hex(text) {
   const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
