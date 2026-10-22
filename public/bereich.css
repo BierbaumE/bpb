@@ -1,0 +1,31 @@
+:root{--bg:#fff;--fg:#111;--mut:#555;--acc:#09f;--on:#fff;--card:#f6f6f6;--line:#ddd;--sec:#eee}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Nunito Sans","Segoe UI",system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--fg);line-height:1.55}
+a{color:inherit}
+h1,h2,h3{font-family:"Trebuchet MS",system-ui,sans-serif;margin:0}
+.t-daheim{--bg:#f7f4ea;--fg:#23301f;--mut:#56634d;--acc:#2f6b3a;--on:#fff;--card:#fff;--line:#e0e5d0;--sec:#e9efd9;--hi:#8fcf6b}
+.t-beratung{--bg:#0a1f28;--fg:#e8f4f6;--mut:#9db8bf;--acc:#5ad1d1;--on:#06202a;--card:#10303b;--line:#1d4452;--sec:#0e2832;--hi:#5ad1d1}
+.t-drive{--bg:#12100d;--fg:#f3eee8;--mut:#b5aba0;--acc:#ffb35c;--on:#1a1208;--card:#1d1a16;--line:#34302a;--sec:#181510;--hi:#ffb35c}
+.hd{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;justify-content:space-between;padding:18px 56px;border-bottom:1px solid var(--line)}
+.brand{text-decoration:none;font-weight:800;font-size:24px;letter-spacing:.5px}.brand b{color:var(--hi)}
+nav{display:flex;flex-wrap:wrap;gap:6px 24px;font-size:15px;font-weight:600;align-items:center}nav a{text-decoration:none;padding:8px 0}
+.btn{display:inline-block;text-decoration:none;font-weight:800;padding:13px 22px;border-radius:12px;background:var(--acc);color:var(--on)}
+.btn.ghost{background:none;border:2px solid var(--acc);color:var(--fg);padding:11px 20px}
+.hero{padding:60px 56px 48px;display:flex;gap:40px;align-items:center}.ht{flex:1;min-width:0}
+.eb{margin:0 0 16px;font-size:13px;font-weight:800;letter-spacing:2px;color:var(--hi)}
+h1{font-size:clamp(2.2rem,6vw,4.4rem);line-height:1.04;font-weight:800;letter-spacing:-1px;max-width:900px}h1 em{font-style:normal;color:var(--hi)}
+.lead{margin:24px 0 28px;max-width:620px;font-size:20px;color:var(--mut)}
+.logo{flex:none;width:340px;height:auto;border-radius:24px}
+section{padding:56px}h2{font-size:clamp(1.7rem,4vw,2.6rem);margin-bottom:10px;font-weight:800}
+.sub{margin:0 0 28px;max-width:640px;color:var(--mut);font-size:18px}
+.alt{background:var(--sec)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--hi);border-radius:20px;padding:26px}.card h3{font-size:22px;margin-bottom:8px}.card p{margin:0;color:var(--mut)}
+.card .ph{height:130px;border-radius:14px;margin-bottom:14px;background:repeating-linear-gradient(135deg,var(--line) 0,var(--line) 16px,var(--sec) 16px,var(--sec) 32px)}
+.steps .n{font-size:40px;font-weight:900;color:var(--hi);line-height:1}
+.panel{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}.facts{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:10px 24px}.facts div{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}.facts div:last-child{border:0}
+.cta{text-align:center;background:var(--acc);color:var(--on)}.cta h2{margin-bottom:10px}.cta p{margin:0 0 22px;font-size:18px}.cta .btn{background:var(--on);color:var(--fg)}
+.t-daheim .cta .btn,.t-beratung .cta .btn,.t-drive .cta .btn{background:var(--bg);color:var(--fg)}
+footer{padding:26px 56px;display:flex;flex-wrap:wrap;gap:10px 32px;justify-content:space-between;border-top:1px solid var(--line);font-size:14px;color:var(--mut)}footer a{margin-right:16px;text-decoration:none}
+.entwurf{background:var(--sec);border-bottom:1px solid var(--line);padding:8px 56px;font-size:13px;color:var(--mut)}
+@media(max-width:900px){.hd,.hero,section,footer,.entwurf{padding-left:20px;padding-right:20px}.hero{flex-direction:column;align-items:flex-start}.logo{width:100%;max-width:340px}.panel{grid-template-columns:1fr}}
