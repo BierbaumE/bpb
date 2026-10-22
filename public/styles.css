@@ -154,7 +154,7 @@ a.area:hover, a.area:focus-visible { background: rgba(246, 241, 255, .12); }
 .a-digital { --c: #ff7ab0; }
 .a-daheim { --c: #8fcf6b; }
 .a-beratung { --c: #5ad1d1; }
-.a-auto { --c: #ffb35c; }
+.a-drive { --c: #ffb35c; }
 
 footer {
   display: flex;
