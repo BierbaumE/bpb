@@ -30,7 +30,7 @@ body {
 }
 
 .top { display: flex; align-items: center; gap: 14px; }
-.top img { display: block; width: 48px; height: 48px; }
+.mark b { color: #ffb35c; letter-spacing: 1px; }
 
 .mark {
   font-weight: 700;

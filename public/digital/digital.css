@@ -3,8 +3,7 @@ body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;b
 a{color:inherit}
 h1,h2,h3{font-family:"Trebuchet MS",system-ui,sans-serif}
 .hd{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;justify-content:space-between;padding:18px 56px;border-bottom:1px solid #261f40}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:700;font-size:18px}
-.brand img{display:block;width:56px;height:56px}
+.brand{display:flex;align-items:center;text-decoration:none;font-weight:800;font-size:24px;letter-spacing:.5px}
 .brand b{color:#ff7ab0}
 nav{display:flex;flex-wrap:wrap;gap:6px 26px;font-size:15px;font-weight:500;align-items:center}
 nav a{text-decoration:none;padding:10px 0}
@@ -16,7 +15,7 @@ nav a{text-decoration:none;padding:10px 0}
 .small{padding:10px 20px}
 .hero{padding:70px 56px 48px;display:flex;gap:40px;align-items:center}
 .herotext{flex:1;min-width:0}
-.herologo{flex:none;width:300px;height:300px;filter:drop-shadow(0 0 40px rgba(255,122,176,.27))}
+.herologo{flex:none;width:340px;height:auto;filter:drop-shadow(0 0 40px rgba(255,122,176,.27))}
 .eyebrow{margin:0 0 16px;font-size:14px;font-weight:700;letter-spacing:2px;color:#ffb35c}
 h1{margin:0;max-width:900px;font-weight:800;font-size:80px;line-height:1;letter-spacing:-2px}
 h1 span{color:#ff7ab0}

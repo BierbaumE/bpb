@@ -2,7 +2,7 @@
 // Ohne Anmeldung zeigt "/" den schlichten Platzhalter mit Login-Knopf; mit Cookie die echte Seite.
 const PW_SHA256 = "9235b16e379f9f9263b9b0c9afc384d003183fd2ced9855f8bf01d390efe62f6";
 const COOKIE = "bpb_zugang";
-const OEFFENTLICH = new Set(["/", "/login", "/logout", "/platzhalter/platzhalter.css", "/favicon.svg", "/logo-dach.svg", "/logo-dach-atmend.svg", "/robots.txt"]);
+const OEFFENTLICH = new Set(["/", "/login", "/logout", "/platzhalter/platzhalter.css", "/favicon.svg", "/logo-dach.svg", "/robots.txt"]);
 
 async function sha256Hex(text) {
   const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
@@ -50,7 +50,7 @@ function loginSeite(fehler) {
 </head>
 <body>
 <main>
-  <picture><source media="(prefers-reduced-motion: reduce)" srcset="/logo-dach.svg"><img class="logo" src="/logo-dach-atmend.svg" alt="BPB" width="110" height="110"></picture>
+  <img class="logo" src="/logo-dach.svg" alt="BPB" width="150" height="106">
   <h1>Login</h1>
   <form method="post" action="/login">
     <input id="pw" name="pw" type="password" placeholder="Passwort" autocomplete="current-password" autocapitalize="none" autocorrect="off" spellcheck="false" autofocus required>
