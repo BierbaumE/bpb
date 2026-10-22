@@ -16,7 +16,7 @@ nav a{text-decoration:none;padding:10px 0}
 .hero{padding:70px 56px 48px;display:flex;gap:40px;align-items:center}
 .herotext{flex:1;min-width:0}
 .herologo{flex:none;width:340px;height:auto;filter:drop-shadow(0 0 40px rgba(255,122,176,.27))}
-.eyebrow{margin:0 0 16px;font-size:14px;font-weight:700;letter-spacing:2px;color:#ffb35c}
+.eyebrow{margin:0 0 16px;font-size:16px;font-weight:700;letter-spacing:.3px;color:#ffb35c}
 h1{margin:0;max-width:900px;font-weight:800;font-size:80px;line-height:1;letter-spacing:-2px}
 h1 span{color:#ff7ab0}
 .lead{margin:28px 0 0;max-width:620px;font-size:21px;color:#b9b0d4}
