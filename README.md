@@ -1,11 +1,12 @@
 # bpb – Dach-Seite BierbaumPerformanceBrothers
 
-Statische Seite als Cloudflare Worker (nur Dateien, kein Skript).
+Cloudflare Worker (`worker.js`) mit statischen Dateien aus `public/`. Die Seite ist noch im Aufbau und liegt hinter einem Passwort.
 
 - Adresse: `https://bierbaumperformancebrothers.com` (und `www.`), Vorschau `https://bpb.bpbrothers.workers.dev`
-- Dateien: `public/index.html`, `public/styles.css`, `public/favicon.svg`, `public/robots.txt`, `public/_headers`
-- Stand: erste Platzhalterseite „Hier entsteht die Seite …“, bewusst `noindex` (robots.txt, Meta, Header), bis Impressum und Datenschutz stehen.
-- Keine externen Schriften, Skripte oder Tracker (kein Cookie-Banner nötig); CSP in `public/_headers`.
+- **Zugang:** `worker.js` zeigt ohne Cookie nur den Platzhalter (`public/platzhalter/`) mit Login-Knopf; öffentlich sind nur die Pfade in `OEFFENTLICH` (Login, Platzhalter-CSS, Favicon, `logo-dach.svg`, robots). Nach dem Passwort (Hash im Code, nie das Passwort) folgt die Seite im Aufbau. Alles `noindex`, bis die Seite öffentlich geht.
+- Seiten: `public/index.html` (Startseite), `public/digital/` (Auftritt Digital, Entwurf C), `public/impressum/` und `public/datenschutz/` (Entwürfe, allgemein formuliert, Klammern orange; Quelle sind die Entwürfe im Projekt), `public/platzhalter/`.
+- **AGB und AVV stehen bewusst nicht auf der Seite**; sie kommen erst im Bestellvorgang (Link + Checkbox).
+- Keine externen Schriften, Skripte oder Tracker (kein Cookie-Banner nötig); CSP in `worker.js` und `public/_headers`.
 - Deploy: Workers Builds aus diesem Repo (Branch `main`), Konfiguration in `wrangler.toml`.
-- Später: Verzeichnis-Seite aus `portfolio.json`, siehe `claude/KONZEPT-BPB.md` Abschnitt 4a.
-- Logo (22.10.): Arbeitslogo Quadrat/Bungee mit Gravitationsnetz als SVG: `public/logo-dach.svg` (Platzhalter, Login, Startseite; Violett/Pink), `public/digital/logo.svg` (Seite Digital; Digital Nacht), `public/favicon.svg` (flache Kleinform). Atmende Fassungen (SMIL, ca. 40 KB; Netz atmet in 7 s, BPB schwebt 2,5 px) `public/logo-dach-atmend.svg` und `public/digital/logo-atmend.svg` auf Platzhalter, Login und Digital-Hero; bei „Bewegung reduzieren“ greift per `<picture>` die ruhige Fassung. Generatoren im Projekt unter `code/bpb-logos/`, Entscheidung in `claude/LOGO-RICHTUNG.md`.
+- Später: Verzeichnis-Seite aus `portfolio.json`, siehe `claude/KONZEPT-BPB.md` Abschnitt 4a. Vor der Veröffentlichung: Impressum/Datenschutz füllen und in `OEFFENTLICH` aufnehmen, Login und `noindex` entfernen.
+- **Marke (22.10.):** BPB steht als Text im Header, Untermarken in Akzentfarbe ohne Leerzeichen („BPB**Digital**“). Das **Sonnenlogo** (SVG, Archivo Black + Manrope) steht nur dort, wo es hingehört: `public/logo-dach.svg` (Platzhalter, Login; Sonnenuntergang), `public/digital/logo.svg` (Hero von Digital; Nacht/Rosa), `public/favicon.svg` (Sonne mit BPB). Das frühere Netz-Logo (inkl. atmender Fassung) liegt auf dem Stapel und ist hier entfernt (Git-Stand `2c233aa`). Generatoren im Projekt unter `code/bpb-logos/` (`runde35.py`), Entscheidung in `claude/LOGO-RICHTUNG.md`.
