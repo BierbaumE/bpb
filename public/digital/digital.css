@@ -4,7 +4,7 @@ a{color:inherit}
 h1,h2,h3{font-family:"Trebuchet MS",system-ui,sans-serif}
 .hd{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;justify-content:space-between;padding:18px 56px;border-bottom:1px solid #261f40}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:700;font-size:18px}
-.brand img{border-radius:8px;object-fit:cover}
+.brand img{display:block;width:56px;height:56px}
 .brand b{color:#ff7ab0}
 nav{display:flex;flex-wrap:wrap;gap:6px 26px;font-size:15px;font-weight:500;align-items:center}
 nav a{text-decoration:none;padding:10px 0}
@@ -14,7 +14,9 @@ nav a{text-decoration:none;padding:10px 0}
 .ghost{border:2px solid #4a3f78;padding:11px 22px}
 .white{background:#fff;color:#2a1a55;font-weight:800;font-size:18px;padding:16px 30px;border-radius:12px}
 .small{padding:10px 20px}
-.hero{padding:80px 56px 56px}
+.hero{padding:70px 56px 48px;display:flex;gap:40px;align-items:center}
+.herotext{flex:1;min-width:0}
+.herologo{flex:none;width:300px;height:300px;filter:drop-shadow(0 0 40px rgba(255,122,176,.27))}
 .eyebrow{margin:0 0 16px;font-size:14px;font-weight:700;letter-spacing:2px;color:#ffb35c}
 h1{margin:0;max-width:900px;font-weight:800;font-size:80px;line-height:1;letter-spacing:-2px}
 h1 span{color:#ff7ab0}
@@ -39,13 +41,14 @@ h1 span{color:#ff7ab0}
 .about>div{flex:1 1 380px;min-width:0}
 .about h2{margin:0 0 14px}
 .about p{margin:0 0 10px;font-size:18px;color:#b9b0d4}
-.about img{width:100%;max-width:380px;height:auto;border-radius:20px;display:block}
+.about img{width:100%;max-width:300px;height:auto;display:block}
 .cta{margin:0 56px 56px;padding:56px;background:linear-gradient(120deg,#3f2fa8,#9b3ac0 60%,#e8508f);border-radius:26px;display:flex;flex-wrap:wrap;gap:24px 40px;align-items:center;justify-content:space-between}
 .cta>div{flex:1 1 340px;min-width:0}
 .cta h2{margin:0 0 8px;font-weight:800;font-size:38px;line-height:1.1}
 .cta p{margin:0;font-size:17px;color:#f3ecff}
 .ft{padding:26px 56px;border-top:1px solid #261f40;display:flex;flex-wrap:wrap;gap:10px 32px;justify-content:space-between;font-size:14px;color:#8a80ab}
 .ft a{text-decoration:none;margin-left:22px}
+@media(max-width:900px){.herologo{display:none}}
 @media(max-width:700px){
 .hd,.hero,.prod,.sec,.ft{padding-left:20px;padding-right:20px}
 .hero{padding-top:44px}

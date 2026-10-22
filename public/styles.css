@@ -29,6 +29,9 @@ body {
   background: var(--night);
 }
 
+.top { display: flex; align-items: center; gap: 14px; }
+.top img { display: block; width: 48px; height: 48px; }
+
 .mark {
   font-weight: 700;
   font-size: 1.05rem;

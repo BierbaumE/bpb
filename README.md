@@ -8,3 +8,4 @@ Statische Seite als Cloudflare Worker (nur Dateien, kein Skript).
 - Keine externen Schriften, Skripte oder Tracker (kein Cookie-Banner nötig); CSP in `public/_headers`.
 - Deploy: Workers Builds aus diesem Repo (Branch `main`), Konfiguration in `wrangler.toml`.
 - Später: Verzeichnis-Seite aus `portfolio.json`, siehe `claude/KONZEPT-BPB.md` Abschnitt 4a.
+- Logo (22.10.): Arbeitslogo Quadrat/Bungee mit Gravitationsnetz als SVG: `public/logo-dach.svg` (Platzhalter, Login, Startseite; Violett/Pink), `public/digital/logo.svg` (Seite Digital; Digital Nacht), `public/favicon.svg` (flache Kleinform). Generatoren im Projekt unter `code/bpb-logos/`, Entscheidung in `claude/LOGO-RICHTUNG.md`.
