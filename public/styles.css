@@ -67,7 +67,7 @@ body {
 main {
   flex: 1;
   width: 100%;
-  max-width: 880px;
+  max-width: 1000px;
   padding: 36px 24px 56px;
   margin: 0 auto;
 }
@@ -140,6 +140,21 @@ h1 {
 .sub .back a { color: var(--muted); text-decoration: none; }
 .sub h1 { margin-top: 18px; }
 .products li:nth-child(2) { border-left-color: var(--orange); }
+
+.areas-h { margin: 44px 0 16px; font-size: 1.1rem; font-weight: 700; color: var(--muted); letter-spacing: .08em; text-transform: uppercase; }
+.areas { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); }
+.area { --c: var(--pink); display: flex; flex-direction: column; gap: 8px; padding: 22px; border-radius: 20px; background: rgba(246, 241, 255, .06); border: 1px solid rgba(246, 241, 255, .14); border-top: 4px solid var(--c); color: var(--text); text-decoration: none; }
+.area p { margin: 0; color: var(--muted); flex: 1; }
+.area .tag { font-weight: 800; font-size: 1.5rem; letter-spacing: .5px; }
+.area .tag b { color: var(--c); }
+.area .go { color: var(--c); font-weight: 700; }
+.area .soon { font-size: .85rem; color: var(--muted); opacity: .8; }
+footer a { color: inherit; }
+a.area:hover, a.area:focus-visible { background: rgba(246, 241, 255, .12); }
+.a-digital { --c: #ff7ab0; }
+.a-garten { --c: #8fcf6b; }
+.a-beratung { --c: #5ad1d1; }
+.a-auto { --c: #ffb35c; }
 
 footer {
   display: flex;
