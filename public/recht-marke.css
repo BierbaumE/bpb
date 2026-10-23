@@ -1,0 +1,33 @@
+/* Impressum und Datenschutz je Marke: gleiche Texte, Farben und Kopfzeile der jeweiligen Marke (erzeugt von tools/rechtsseiten_build.py) */
+:root{--bg:#fff;--fg:#111;--mut:#555;--acc:#09f;--on:#fff;--card:#f6f6f6;--line:#ddd;--hi:#09f;--mk:#fff3d6;--mkfg:#5c3b00}
+.m-bytes{--bg:#0e0b1a;--fg:#ece8f7;--mut:#b9b0d4;--acc:#ff7ab0;--on:#0e0b1a;--card:#151028;--line:#261f40;--hi:#ff9cc7;--mk:rgba(255,179,92,.18);--mkfg:#ffd9a8}
+.m-bauhof{--bg:#f7f4ea;--fg:#23301f;--mut:#56634d;--acc:#2f6b3a;--on:#fff;--card:#fff;--line:#e0e5d0;--hi:#2f6b3a;--mk:#fff0c2;--mkfg:#5c3b00}
+.m-brain{--bg:#0a1f28;--fg:#e8f4f6;--mut:#9db8bf;--acc:#5ad1d1;--on:#06202a;--card:#10303b;--line:#1d4452;--hi:#5ad1d1;--mk:rgba(255,200,120,.18);--mkfg:#ffe0b0}
+.m-bolide{--bg:#12100d;--fg:#f3eee8;--mut:#b5aba0;--acc:#ffb35c;--on:#1a1208;--card:#1d1a16;--line:#34302a;--hi:#ffb35c;--mk:rgba(255,179,92,.2);--mkfg:#ffd9a8}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Nunito Sans","Segoe UI",system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--fg);line-height:1.6}
+a{color:var(--hi)}
+.hd,.ft{display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center;justify-content:space-between;padding:16px 24px}
+.hd{border-bottom:1px solid var(--line)}
+.ft{border-top:1px solid var(--line);margin-top:48px;font-size:14px;color:var(--mut)}
+.brand{font-weight:800;font-size:24px;letter-spacing:.5px;text-decoration:none;color:var(--fg)}
+.brand b{color:var(--hi)}
+nav{display:flex;flex-wrap:wrap;gap:4px 0}
+nav a{margin-right:18px;text-decoration:none;font-size:15px;font-weight:600;color:inherit;padding:6px 0}
+nav a[aria-current=page]{color:var(--hi);border-bottom:2px solid var(--acc)}
+.ft a{margin:0 0 0 14px;text-decoration:none;color:inherit}
+.ft a:hover{color:var(--hi)}
+main{max-width:820px;margin:0 auto;padding:24px 20px}
+h1,h2,h3{font-family:"Trebuchet MS",system-ui,sans-serif;line-height:1.25}
+h1{font-size:32px;margin:12px 0 18px}
+h2{font-size:22px;margin:32px 0 10px;color:var(--hi)}
+h3{font-size:18px;margin:26px 0 8px}
+p,li{color:var(--fg)}
+.marke{margin:0;color:var(--mut);font-size:15px}
+mark{background:var(--mk);color:var(--mkfg);padding:0 3px;border-radius:3px}
+code{background:var(--card);padding:1px 5px;border-radius:4px;font-size:.92em}
+.entwurf{background:var(--card);border-left:4px solid var(--acc);padding:10px 14px;border-radius:6px;font-size:14px}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:14px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--card)}
+@media(max-width:600px){.hd,.ft{padding:14px 16px}.ft a{margin:0 14px 0 0}}
