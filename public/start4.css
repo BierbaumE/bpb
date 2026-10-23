@@ -33,6 +33,7 @@ footer{padding:36px 0 48px;color:var(--mut);font-size:14px;display:flex;justify-
 .t-dunkel{--bg:#0b0b0f;--fg:#f4f1ea;--mut:#9a9aa6;--line:#23232b;--soft:#16161c}
 .t-dunkel .cta{background:#f4f1ea;color:#0b0b0f}.t-dunkel .cta .pill{background:#0b0b0f;color:#f4f1ea}
  
+.bw{color:#cdb98f}
 .logo{display:flex;align-items:center;gap:8px}.sd{display:block;width:14px;height:14px;border-radius:50%;background:#cdb98f}
 html,body.t-dunkel{overflow-x:clip}
 .t-dunkel .hero{position:relative}.t-dunkel .hero::before{content:"";position:absolute;z-index:0;right:-70px;top:44px;width:clamp(200px,34vw,380px);aspect-ratio:1;border-radius:50%;background:#cdb98f;opacity:.16}

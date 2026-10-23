@@ -52,7 +52,7 @@ def hauptseite(was):
     return f'''<!doctype html>
 <html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{SEITEN[was]} – BPB</title><meta name="robots" content="noindex, nofollow"><meta name="theme-color" content="#0b0b0f"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/start4.css"><link rel="stylesheet" href="/recht-haupt.css"></head>
 <body class="t-dunkel">
-<div class="w"><div class="nav"><a class="logo" href="/"><i class="sd"></i><b>BPB</b></a><nav class="rnav">{nav}</nav></div>
+<div class="w"><div class="nav"><a class="logo" href="/"><i class="sd"></i><b>BP<span class="bw">Brothers</span></b></a><nav class="rnav">{nav}</nav></div>
 <main class="recht">
 {TEXTE[was]}
 </main>
