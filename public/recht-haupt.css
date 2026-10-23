@@ -1,0 +1,16 @@
+/* Impressum und Datenschutz im Layout der Hauptseite (baut auf start4.css, Klasse t-dunkel); erzeugt von tools/rechtsseiten_build.py */
+.nav .rnav a:not(.pill){display:inline}
+.rnav a[aria-current=page]{color:var(--fg);border-bottom:2px solid var(--fg);padding-bottom:2px}
+.recht{max-width:760px;padding:24px 0 8px}
+.recht h1{font-size:clamp(2rem,5vw,3rem);letter-spacing:-.04em;font-weight:800;margin:8px 0 22px}
+.recht h2{font-size:clamp(1.25rem,2.4vw,1.55rem);letter-spacing:-.02em;margin:34px 0 8px}
+.recht h3{font-size:1.1rem;letter-spacing:-.01em;margin:24px 0 6px}
+.recht p,.recht li{color:#d4d4dc}
+.recht a{text-decoration:underline;text-underline-offset:3px}
+.recht mark{background:rgba(255,159,28,.18);color:#ffc977;padding:0 4px;border-radius:4px}
+.recht code{background:var(--soft);padding:1px 6px;border-radius:6px;font-size:.92em}
+.recht .entwurf{background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:12px 16px;font-size:14px;color:var(--mut)}
+.recht table{border-collapse:collapse;width:100%;margin:14px 0;font-size:14px;display:block;overflow-x:auto}
+.recht th,.recht td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+.recht th{background:var(--soft)}
+@media(max-width:600px){.rnav{gap:16px}}

@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Erzeugt die Impressum- und Datenschutz-Seiten je Marke (/bytes/impressum/ usw.) aus den Dach-Seiten
-public/impressum/index.html und public/datenschutz/index.html und trägt die Links in den Fußzeilen der Markenseiten ein.
+"""Erzeugt Impressum und Datenschutz für die Hauptseite (/impressum/, /datenschutz/ im Layout der Hauptseite: start4.css, t-dunkel)
+und je Marke (/bytes/impressum/ usw. im Layout der Marke: recht-marke.css) und trägt die Links in den Fußzeilen der Markenseiten ein.
 Aufruf aus der Repo-Wurzel:  python3 tools/rechtsseiten_build.py
-Die Dach-Seiten bleiben die Quelle für den Text; Farben je Marke stehen in public/recht-marke.css (Klassen m-bytes, m-bauhof, m-brain, m-bolide)."""
+Quelle für den Text: tools/quellen/impressum.html und datenschutz.html (nur ändern, wenn sich der Text ändert; dann neu erzeugen).
+Layout ändert sich an der Hauptseite (start4.css, public/index.html) oder an einer Marke (public/recht-marke.css, Markenseite) -> hier die Vorlage anpassen und neu erzeugen."""
 import re, pathlib
 ROOT = pathlib.Path(__file__).resolve().parent.parent / "public"
 MARKEN = {  # Pfad: (Kurzname, Wortteil, Langform, Klasse)
@@ -15,9 +16,7 @@ THEMEFARBE = {"bytes": "#0e0b1a", "bauhof": "#f7f4ea", "brain": "#0a1f28", "boli
 SEITEN = {"impressum": "Impressum", "datenschutz": "Datenschutz"}
 
 def haupttext(name):
-    html = (ROOT / name / "index.html").read_text()
-    m = re.search(r"<main>(.*?)</main>", html, re.S)
-    return m.group(1).strip()
+    return (pathlib.Path(__file__).resolve().parent / "quellen" / (name + ".html")).read_text().strip()
 
 TEXTE = {n: haupttext(n) for n in SEITEN}
 
@@ -47,6 +46,21 @@ def seite(marke, was):
 </body>
 </html>
 '''
+
+def hauptseite(was):
+    nav = "".join(f'<a href="/{s}/"{" aria-current=\"page\"" if s == was else ""}>{t}</a>' for s, t in SEITEN.items())
+    return f'''<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{SEITEN[was]} – BPB</title><meta name="robots" content="noindex, nofollow"><meta name="theme-color" content="#0b0b0f"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/start4.css"><link rel="stylesheet" href="/recht-haupt.css"></head>
+<body class="t-dunkel">
+<div class="w"><div class="nav"><a href="/"><b>BPB</b></a><nav class="rnav">{nav}</nav></div>
+<main class="recht">
+{TEXTE[was]}
+</main>
+<footer><span>© BierbaumPerformanceBrothers</span><span><a href="/impressum/">Impressum</a><a href="/datenschutz/">Datenschutz</a></span></footer></div></body></html>
+'''
+
+for was in SEITEN:
+    (ROOT / was / "index.html").write_text(hauptseite(was))
 
 for marke in MARKEN:
     for was in SEITEN:
