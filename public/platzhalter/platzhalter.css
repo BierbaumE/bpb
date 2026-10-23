@@ -1,8 +1,8 @@
 :root {
-  --night: #1c1240;
-  --text: #f6f1ff;
-  --soft: #b9aedb;
-  --line: #4a3b86;
+  --night: #0b0b0f;
+  --text: #f4f1ea;
+  --soft: #9a9aa6;
+  --line: #23232b;
 }
 
 * { box-sizing: border-box; }
@@ -85,7 +85,7 @@ button {
 
 .fehler {
   margin: 16px 0 0;
-  color: #ffb3c7;
+  color: #e0a39a;
   font-size: 0.95rem;
 }
 

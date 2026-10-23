@@ -44,7 +44,7 @@ function loginSeite(fehler) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Login</title>
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#1c1240">
+<meta name="theme-color" content="#0b0b0f">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/platzhalter/platzhalter.css">
 </head>
