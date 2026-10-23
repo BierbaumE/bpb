@@ -33,7 +33,7 @@ h1 span{color:#ff7ab0}
 .sec h2{margin:0 0 32px;font-weight:800;font-size:40px}
 .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:20px}
 .lt{padding:4px 0 4px 22px;border-left:4px solid}
-.l1{border-color:#ff7ab0}.l2{border-color:#ffb35c}.l3{border-color:#8d7bff}
+.l1{border-color:#ff7ab0}.l2{border-color:#ffb35c}.l3{border-color:#8d7bff}.l4{border-color:#5ad1d1}
 .lt h3{margin:0 0 6px;font-size:22px}
 .lt p{margin:0;color:#b9b0d4}
 .about{display:flex;flex-wrap:wrap;gap:40px;align-items:center}
