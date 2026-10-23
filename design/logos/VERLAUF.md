@@ -1,5 +1,7 @@
 # BPB-Logo – Vorschläge und Stand (#21, zu #16 Dachdesign)
 
+> Bis 23.10.2026 im Projekt als `claude/LOGO-VORSCHLAEGE.md`, unverändert übernommen. Die erwähnten Skripte der Runden 0–3 (`logos.py`, `rakete_varianten.py`, `vorlage-recraft.svg`, `runde2.py`, `konzepte_runde3.py`) sind seit 23.10. gelöscht, stehen aber in der Git-Historie (Commit `8cf7678`). Aktueller Stand: `claude/LOGO-RICHTUNG.md` im Projekt.
+
 **Stand 22.10.2026, 00:28 · offen:** Eike ist noch von keinem Vorschlag überzeugt („definitiv noch nichts dabei, was für ein finales Logo reicht“). Die Entwürfe bleiben als Vorschläge liegen.
 
 **Alle Entwürfe ansehen:** Design-Fläche „BPB Logo – sportliche Varianten“ (Artifact, privat) mit drei Seiten: Runde 1, Runde 2 und Runde 3 – neu gedacht.
