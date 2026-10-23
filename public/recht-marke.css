@@ -30,4 +30,8 @@ code{background:var(--card);padding:1px 5px;border-radius:4px;font-size:.92em}
 table{border-collapse:collapse;width:100%;margin:14px 0;font-size:14px;display:block;overflow-x:auto}
 th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
 th{background:var(--card)}
-@media(max-width:600px){.hd,.ft{padding:14px 16px}.ft a{margin:0 14px 0 0}}
+@media(max-width:600px){.hd,.ft{padding:14px 16px}.ft a{margin:0 14px 0 0}
+.hd{flex-direction:column;align-items:stretch;gap:12px}
+.hd nav{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:999px;padding:3px}
+.hd nav a{margin:0;text-align:center;padding:8px 0;border-radius:999px}
+.hd nav a[aria-current=page]{background:var(--card);border-bottom:0}}

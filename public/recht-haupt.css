@@ -13,4 +13,8 @@
 .recht table{border-collapse:collapse;width:100%;margin:14px 0;font-size:14px;display:block;overflow-x:auto}
 .recht th,.recht td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
 .recht th{background:var(--soft)}
-@media(max-width:600px){.rnav{gap:16px}}
+@media(max-width:600px){
+.nav{flex-wrap:wrap;height:auto;padding:14px 0 4px;gap:12px}
+.nav .rnav{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:999px;padding:3px}
+.nav .rnav a:not(.pill){display:block;text-align:center;padding:8px 0;border-radius:999px}
+.rnav a[aria-current=page]{background:var(--soft);border-bottom:0;padding-bottom:8px}}
