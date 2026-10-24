@@ -2,7 +2,7 @@
 // Ohne Anmeldung zeigt "/" den schlichten Platzhalter mit Login-Knopf; mit Cookie die echte Seite.
 const PW_SHA256 = "9235b16e379f9f9263b9b0c9afc384d003183fd2ced9855f8bf01d390efe62f6";
 const COOKIE = "bpb_zugang";
-const OEFFENTLICH = new Set(["/", "/login", "/logout", "/platzhalter/platzhalter.css", "/favicon.svg", "/logo-dach.svg", "/robots.txt"]);
+const OEFFENTLICH = new Set(["/", "/login", "/logout", "/platzhalter/platzhalter.css", "/favicon.svg", "/logo-dach.svg", "/robots.txt", "/.well-known/security.txt"]);
 
 async function sha256Hex(text) {
   const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
