@@ -31,3 +31,4 @@ footer{padding:26px 56px;display:flex;flex-wrap:wrap;gap:10px 32px;justify-conte
 @media(max-width:900px){.hd,.hero,section,footer,.entwurf{padding-left:20px;padding-right:20px}.hero{flex-direction:column;align-items:flex-start}.logo{width:100%;max-width:340px}.panel{grid-template-columns:1fr}}
 
 @media(max-width:600px){.cta a[href^="mailto:"]{font-size:3.7vw;overflow-wrap:anywhere}.hd nav a:not(.btn){display:none}footer span{display:flex;flex-wrap:wrap;gap:6px 0}}
+@media(max-width:600px){.panel>*{min-width:0}.facts{padding:6px 16px}.facts div{flex-wrap:wrap;gap:4px 16px}.facts b{overflow-wrap:anywhere}}
