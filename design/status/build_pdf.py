@@ -56,7 +56,7 @@ td.k { font-weight: 700; white-space: nowrap; }
 .lg svg { max-width: 100%; max-height: 100%; width: 14mm; height: 14mm; }
 .lg.wm svg { width: 30mm; }
 .lg p { font-size: 7.8pt; color: #6b6b76; margin: 1.5mm 0 0; line-height: 1.35; }
-.form td { height: 9mm; }
+.form td { height: 16mm; }
 .opt { white-space: nowrap; display: inline-block; margin-right: 2mm; }
 .chk { display: inline-block; width: 3.2mm; height: 3.2mm; border: 1.3px solid #0b0b0f; border-radius: .6mm; margin-right: 1.3mm; vertical-align: -.5mm; }
 .line { border-bottom: 1px solid #cfc8b6; height: 7mm; margin-bottom: 1mm; }
@@ -70,18 +70,18 @@ def img(n):
     return f"data:image/svg+xml;base64,{d}"
 M=[("bytes","BPBytes","BierbaumPerformanceBytes"),("bauhof","BPBauhof","BierbaumPerformanceBauhof"),("brain","BPBrain","BierbaumPerformanceBrain"),("bolide","BPBolide","BierbaumPerformanceBolide")]
 logos='<div class="lg2">'+"".join(f'<div><img src="{img(n)}"><b>{k}</b>{l}</div>' for n,k,l in M)+'</div>'
-STAND="22.10.2026"
+STAND="24.10.2026"
 HTML=f"""<!doctype html><html lang="de"><head><meta charset="utf-8"><title>Projektstatus BierbaumPerformanceBrothers</title><style>{CSS}</style></head><body>
 <div class="cover"><div class="sun"></div><div class="sun2"></div><small>Projektstatus · Stand {STAND}</small><h1>BierbaumPerformance&shy;Brothers</h1><p>Wo wir stehen, was zuletzt passiert ist und was als Nächstes kommt. Zur Information für die Familie.</p></div>
 <div class="wrap">
 <h2><span class="n">1</span>Auf einen Blick</h2>
-<div class="kpis"><div class="kpi"><b>4</b><span>Apps laufen</span></div><div class="kpi"><b>4</b><span>Bereiche mit eigener Seite im Entwurf</span></div><div class="kpi"><b>0</b><span>offene Feedback-Meldungen</span></div><div class="kpi"><b>10,49 $</b><span>Kosten bisher (Domain, pro Jahr)</span></div></div>
+<div class="kpis"><div class="kpi"><b>4</b><span>Apps laufen</span></div><div class="kpi"><b>4</b><span>Bereiche mit eigener Seite im Entwurf</span></div><div class="kpi"><b>1</b><span>offene Feedback-Meldung</span></div><div class="kpi"><b>10,49 $</b><span>Kosten bisher (Domain, pro Jahr)</span></div></div>
 <ul>
 <li><b>Die Firma:</b> BierbaumPerformanceBrothers (Kürzel BPB), ein Familienbetrieb. Geplant als Kleinunternehmer, das Gewerbe ist noch nicht angemeldet.</li>
 <li><b>Die Marken sind festgelegt:</b> BPBytes, BPBauhof, BPBrain und BPBolide (siehe Abschnitt 2).</li>
 <li><b>Die Apps:</b> Craftsman (Handwerker), Abkassiert (Feste und Vereine), Zuhause (Familie) und die Markt-und-Trend-Analyse laufen. Craftsman, Abkassiert und Zuhause sind auf die eigene Adresse umgezogen.</li>
-<li><b>Die Webseite:</b> Sie ist online, aber noch hinter einem Passwort. Die Startseite ist neu gestaltet (schlicht und dunkel), die vier Bereichsseiten stehen als Entwurf mit Platzhaltertexten.</li>
-<li><b>Gerade offen:</b> Farbwelt und Aufbau der Bereichsseiten, echte Texte und Fotos, Impressum und Datenschutz ausfüllen, Gewerbeanmeldung.</li></ul>
+<li><b>Die Webseite:</b> Sie ist online, aber noch hinter einem Passwort. Die Startseite ist neu gestaltet (dunkel, mit Sand-Sonne), die vier Bereichsseiten stehen als Entwurf mit Platzhaltertexten. Eine eigene Mail-Adresse (info@) ist eingerichtet.</li>
+<li><b>Gerade offen:</b> Farbwelt und Aufbau der Bereichsseiten, echte Texte und Fotos, Telefonnummer im Impressum, Gewerbeanmeldung. <b>Neu: BPBytes soll an echten Fällen aus dem Arbeitsalltag getestet werden (siehe Abschnitt 5).</b></li></ul>
 <div class="box warn"><b>Wichtig zu wissen</b><ul>
 <li>Noch nichts ist öffentlich beworben: Die Seiten sind für Suchmaschinen gesperrt, es gibt keine echten Kunden und keine echte Bezahlung in den Apps.</li>
 <li>Vor dem ersten echten Verkauf braucht es Gewerbeanmeldung, ausgefülltes Impressum und Datenschutz, geprüfte AGB und Auftragsverarbeitung (die Entwürfe liegen vor, anwaltliche Prüfung steht aus) und die Prüfung des Namens auf Markenrechte.</li>
@@ -96,13 +96,13 @@ HTML=f"""<!doctype html><html lang="de"><head><meta charset="utf-8"><title>Proje
 <tr><td class="k">BPBrain</td><td>BierbaumPerformanceBrain</td><td>Beratung für Unternehmen und persönliche Beratung.</td><td><span class="pill p-prev">Platzhalter</span></td></tr>
 <tr><td class="k">BPBolide</td><td>BierbaumPerformanceBolide</td><td>Fahrzeuge vermitteln, kaufen und verkaufen.</td><td><span class="pill p-prev">Platzhalter</span></td></tr></tbody></table>
 <div class="box"><b>So wird geschrieben.</b> Die Kurzform (BPBytes …) steht für alles, was man sieht: Kopfzeile, Überschrift, Menü, Logo, Visitenkarte. Die Langform (BierbaumPerformanceBytes …) steht für Offizielles: Seitentitel, Fußzeile „eine Marke von BierbaumPerformanceBrothers“, Impressum, Rechnung, Angebot. Nie mit Leerzeichen, nie ganz in Großbuchstaben. Auf der Webseite sprechen wir von „Familie“ statt von „drei Brüdern“, damit weitere Familienmitglieder dazukommen können. Der Firmenname bleibt unverändert.</div>
-<div class="box"><b>Das Logo.</b> Das Sonnenlogo vom Anfang ist das Arbeitslogo: BPB als Schrift, dahinter eine Sonne in der Farbe des Bereichs. Das Dachlogo hat den Sonnenuntergang. Das frühere Netz-Logo ist zu unruhig und liegt auf dem Stapel. Das Markenrecht (Namensschutz) ist noch nicht geprüft.</div>
+<div class="box"><b>Das Logo.</b> Das Sonnenlogo vom Anfang ist das Arbeitslogo: BPB als Schrift, dahinter eine Sonne in der Farbe des Bereichs. Das Dachlogo trägt seit 23.10. die Farben der Hauptseite (Nachtschwarz, Sand, Creme). Das frühere Netz-Logo ist zu unruhig und liegt auf dem Stapel. Das Markenrecht (Namensschutz) ist noch nicht geprüft.</div>
 
 <h3>Die Apps</h3>
 <table><thead><tr><th style="width:19%">App</th><th>Wofür</th><th style="width:16%">Stand</th></tr></thead><tbody>
-<tr><td class="k">Craftsman</td><td>Handwerker-App: Projekte, Zeiten, Material, Angebote, Rechnungen als PDF, Kalender, Arbeitszeit, in der größten Stufe auch Buchhaltung und Verträge. Eine Bestellstrecke mit AGB und Kündigung ist gebaut, aber ausgeschaltet.</td><td>Version 1.26.3<br><span class="pill p-live">läuft</span></td></tr>
-<tr><td class="k">Abkassiert</td><td>Gastro- und Event-App für Feste und Vereine: Bestellung am Tisch, Bon an Küche oder Theke, Kassieren, Nachbestellen, Warnung bei langer Wartezeit. Bestellstrecke gebaut, ausgeschaltet.</td><td>Version 0.11.2<br><span class="pill p-live">läuft</span></td></tr>
-<tr><td class="k">Zuhause</td><td>Private Familien- und Smart-Home-App: Dashboard, Kalender, Projekte mit Zeiten, Einkaufsliste.</td><td>Version 1.52.7<br><span class="pill p-live">läuft</span></td></tr>
+<tr><td class="k">Craftsman</td><td>Handwerker-App: Projekte, Zeiten, Material, Angebote, Rechnungen als PDF, Kalender, Arbeitszeit, in der größten Stufe auch Buchhaltung und Verträge. Eine Bestellstrecke mit AGB und Kündigung ist gebaut, aber ausgeschaltet.</td><td>Version 1.26.4<br><span class="pill p-live">läuft</span></td></tr>
+<tr><td class="k">Abkassiert</td><td>Gastro- und Event-App für Feste und Vereine: Bestellung am Tisch, Bon an Küche oder Theke, Kassieren, Nachbestellen, Warnung bei langer Wartezeit. Bestellstrecke gebaut, ausgeschaltet.</td><td>Version 0.11.3<br><span class="pill p-live">läuft</span></td></tr>
+<tr><td class="k">Zuhause</td><td>Private Familien- und Smart-Home-App: Dashboard, Kalender, Projekte mit Zeiten, Einkaufsliste.</td><td>Version 1.54.0<br><span class="pill p-live">läuft</span></td></tr>
 <tr><td class="k">Markt-und-Trend-Analyse</td><td>Internes Werkzeug für Markt- und Trendanalyse.</td><td>Version 0.7.4<br><span class="pill p-wait">Umzug folgt</span></td></tr></tbody></table>
 <h3>Gemeinsame Regeln für alle Apps</h3>
 <ul><li>Der Herausgeber „BierbaumPerformanceBrothers“ ist überall sichtbar und zentral gesteuert.</li><li>Mehrere Betriebe sind strikt getrennt; Rollen vergibt der Inhaber.</li><li><b>Kein E-Mail-Versand aus den Apps.</b> Rechnungen und Angebote gehen über das Teilen-Menü, Benachrichtigungen über die Glocke.</li><li>Alle Apps bleiben reine Web-Dienste (Einschätzung zum EU Cyber Resilience Act, kein Rechtsrat).</li><li>Rechtstexte sind allgemein zur Dienstleistung formuliert und nennen keine einzelnen Apps. AGB und Auftragsverarbeitung stehen nicht dauerhaft öffentlich auf der Webseite, sondern erscheinen im Bestellvorgang.</li></ul>
@@ -115,6 +115,10 @@ HTML=f"""<!doctype html><html lang="de"><head><meta charset="utf-8"><title>Proje
 
 <h2><span class="n">3</span>Was zuletzt passiert ist</h2>
 <table><thead><tr><th style="width:15%">Datum</th><th>Was</th></tr></thead><tbody>
+<tr><td class="k">23.–24.10.</td><td><ul style="margin:0">
+<li><b>Hauptseite neu gestaltet:</b> dunkel und schlicht mit Sand-Sonne, vier Kacheln in den Farben der Marken, Kopfzeile „BPBrothers“, neues Logo-Farbschema, Menü der Rechtsseiten am Handy, Standorte (Ebermannstadt und Werne).</li>
+<li><b>E-Mail für die Firma:</b> info@ und weitere Adressen laufen über die eigene Domain; Kontakt-Knöpfe auf der Webseite öffnen eine Mail. Eine Sicherheits-Kontaktdatei ist öffentlich abrufbar.</li>
+<li><b>Technik:</b> Zuhause speichert jetzt komplett in der Datenbank statt im Zwischenspeicher; Rechtsseiten von Craftsman und Abkassiert im neuen Layout.</li></ul></td></tr>
 <tr><td class="k">22.10.</td><td><ul style="margin:0">
 <li><b>Markenfamilie festgelegt:</b> BPBytes, BPBauhof, BPBrain, BPBolide mit Langformen; Verwendung Kurz-/Langform entschieden.</li>
 <li><b>Webseite:</b> Sonnenlogo zurück, BPB als Text, Startseite im schlichten dunklen Stil mit Familien-Formulierung, vier Bereichsseiten als Entwurf, Impressum und Datenschutz als Entwurf (noch hinter dem Login).</li>
@@ -128,7 +132,26 @@ HTML=f"""<!doctype html><html lang="de"><head><meta charset="utf-8"><title>Proje
 <tr><td>1</td><td><b>Bereichsseiten fertigstellen.</b> Farbwelt und Layout je Bereich wählen (für BPBauhof gibt es drei Layoutideen), echte Texte und Fotos einsetzen.</td></tr>
 <tr><td>2</td><td><b>Rechtliches vor dem Start:</b> Gewerbeanmeldung, Impressum und Datenschutz ausfüllen und öffentlich schalten, AGB anwaltlich prüfen, Namensschutz (DPMA) prüfen. Erst danach wird die Sperre für Suchmaschinen und das Passwort entfernt.</td></tr>
 <tr><td>3</td><td><b>Weitere Themen:</b> Trend-Analyse umziehen, Anfrageformular auf den Seiten, digitale Visitenkarten je Marke, Geschäftskonto, Backups klären, Bibliotheken selbst ausliefern.</td></tr>
-<tr><td>4</td><td><b>Craftsman und Abkassiert:</b> echte Bezahlung der Tarife und Pakete, E-Rechnung, Buchhaltung für weitere Rechtsformen, Ausbau nach echtem Einsatz.</td></tr></tbody></table>
+<tr><td>4</td><td><b>BPBytes im Alltag testen:</b> zwei bis drei echte Fälle aus unserer Arbeit als kleine Apps bauen und prüfen, ob sie wirklich helfen (Abschnitt 5).</td></tr>
+<tr><td>5</td><td><b>Craftsman und Abkassiert:</b> echte Bezahlung der Tarife und Pakete, E-Rechnung, Buchhaltung für weitere Rechtsformen, Ausbau nach echtem Einsatz.</td></tr></tbody></table>
+
+<h2 class="pb"><span class="n">5</span>Eine Frage an alle</h2>
+<div class="box"><p class="lead"><b>Was nervt euch bei der Arbeit schon lange, und was würdet ihr gern mit einer App lösen?</b></p>
+<p>Wir wollen den Bereich BPBytes an zwei bis drei echten Fällen ausprobieren: Wir bauen eine kleine Lösung und schauen, ob sie im Alltag wirklich hilft. Dafür brauchen wir eure Probleme, am liebsten aus eurem eigenen Arbeitstag.</p></div>
+<h3>Denkt zum Beispiel an</h3>
+<ul>
+<li>Dinge, die ihr jede Woche von Hand macht, auf Zettel, in Excel oder doppelt in zwei Listen.</li>
+<li>Informationen, die ihr ständig suchen oder hinterhertelefonieren müsst.</li>
+<li>Abläufe, bei denen oft etwas vergessen wird oder schiefgeht.</li>
+<li>Alles, wo ihr denkt: „Dafür müsste es doch eine einfache App geben.“</li></ul>
+<h3>Bitte kurz aufschreiben</h3>
+<table class="form"><tbody>
+<tr style="height:16mm"><td style="width:34%"><b>Was ist das Problem?</b></td><td></td></tr>
+<tr><td><b>Wie läuft es heute?</b> (Zettel, Excel, Gespräch …)</td><td></td></tr>
+<tr><td><b>Wie oft kommt es vor, wie viel Zeit kostet es?</b></td><td></td></tr>
+<tr><td><b>Wer ist betroffen?</b> (nur ich, mein Team, die ganze Firma)</td><td></td></tr>
+<tr><td><b>Wie sähe die Lösung im besten Fall aus?</b></td><td></td></tr></tbody></table>
+<p class="small">Es müssen keine fertigen Ideen sein, ein paar Stichworte reichen. Mehrere Probleme sind willkommen. Bitte einfach per Nachricht an Eike. Aus allen Rückmeldungen suchen wir gemeinsam zwei bis drei Fälle aus, die wir zuerst bauen.</p>
 
 </div></body></html>"""
 open("projektstatus.html","w").write(HTML)
@@ -136,4 +159,4 @@ footer=f"""<div style="width:100%;font-family:Inter,Arial,sans-serif;font-size:7
 import os
 with sync_playwright() as p:
     b=p.chromium.launch();pg=b.new_page();pg.goto("file://"+os.getcwd()+"/projektstatus.html")
-    pg.pdf(path="BPB-Projektstatus-2026-10-22.pdf",prefer_css_page_size=True,print_background=True,display_header_footer=True,header_template="<div></div>",footer_template=footer);b.close()
+    pg.pdf(path="BPB-Projektstatus-2026-10-24.pdf",prefer_css_page_size=True,print_background=True,display_header_footer=True,header_template="<div></div>",footer_template=footer);b.close()
