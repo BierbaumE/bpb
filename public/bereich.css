@@ -29,3 +29,5 @@ section{padding:56px}h2{font-size:clamp(1.7rem,4vw,2.6rem);margin-bottom:10px;fo
 footer{padding:26px 56px;display:flex;flex-wrap:wrap;gap:10px 32px;justify-content:space-between;border-top:1px solid var(--line);font-size:14px;color:var(--mut)}footer a{margin-right:16px;text-decoration:none}
 .entwurf{background:var(--sec);border-bottom:1px solid var(--line);padding:8px 56px;font-size:13px;color:var(--mut)}
 @media(max-width:900px){.hd,.hero,section,footer,.entwurf{padding-left:20px;padding-right:20px}.hero{flex-direction:column;align-items:flex-start}.logo{width:100%;max-width:340px}.panel{grid-template-columns:1fr}}
+
+@media(max-width:600px){.cta a[href^="mailto:"]{font-size:3.7vw;overflow-wrap:anywhere}.hd nav a:not(.btn){display:none}footer span{display:flex;flex-wrap:wrap;gap:6px 0}}

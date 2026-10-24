@@ -58,3 +58,5 @@ h1{font-size:42px;letter-spacing:-1px}
 .card h2{font-size:30px}
 .sec h2{font-size:32px}
 }
+
+@media(max-width:600px){.cta a[href^="mailto:"]{font-size:3.7vw;overflow-wrap:anywhere}}

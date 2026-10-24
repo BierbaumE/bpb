@@ -51,3 +51,5 @@ html,body.t-dunkel{overflow-x:clip}
 .k4{--kb:#1d1a16;--kl:#34302a;--ka:#ffb35c;--kh:#ffb35c;--km:#b5aba0}
 @media(min-width:900px){.kacheln{grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.kachel{min-height:190px;padding:20px 18px 18px}}
 @media(max-width:600px){.w{padding:0 20px}.nav nav a:not(.pill){display:none}.cta{padding:28px}}
+
+@media(max-width:600px){.cta a[href^="mailto:"]{font-size:3.7vw;overflow-wrap:anywhere}}
