@@ -1,4 +1,4 @@
-# Projektstatus-PDF (Stand 22.10.2026). Logos aus dem Repo bpb (public/<bereich>/logo.svg, Pfad /home/claude/bpb).
+# Projektstatus-PDF (Inhalt Stand 22.10.2026; Design seit 24.10.2026 wie die Hauptseite: Nachtschwarz, Creme, Sand). Logos aus dem Repo bpb (public/<bereich>/logo.svg, Pfad /home/claude/bpb).
 # Aufruf: python3 build_pdf.py (Ausgabe BPB-Projektstatus-<Datum>.pdf im Arbeitsordner). Inhalt/Stand im Text unten anpassen.
 import base64,sys
 from playwright.sync_api import sync_playwright
@@ -6,64 +6,64 @@ CSS="""
 @page { size: A4; margin: 14mm 0 20mm 0; }
 * { box-sizing: border-box; }
 html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-body { font-family: 'Inter', 'DejaVu Sans', Arial, sans-serif; color: #1c1240; font-size: 10pt; line-height: 1.45; margin: 0; }
-a { color: #5b3fd1; text-decoration: none; }
-.cover { background: linear-gradient(135deg, #1c1240 0%, #3a2a8a 55%, #e8508f 100%); color: #fff; padding: 29mm 16mm 12mm; margin: -14mm 0 7mm; position: relative; overflow: hidden; }
-.cover .sun { position: absolute; right: -14mm; bottom: -22mm; width: 70mm; height: 70mm; border-radius: 50%; background: #ffb35c; opacity: .92; }
-.cover .sun2 { position: absolute; right: 22mm; bottom: -22mm; width: 38mm; height: 38mm; border-radius: 50%; background: #e8508f; opacity: .9; }
+body { font-family: 'Inter', 'DejaVu Sans', Arial, sans-serif; color: #0b0b0f; font-size: 10pt; line-height: 1.45; margin: 0; }
+a { color: #8a7448; text-decoration: none; }
+.cover { background: #0b0b0f; color: #f4f1ea; padding: 29mm 16mm 12mm; margin: -14mm 0 7mm; position: relative; overflow: hidden; }
+.cover .sun { position: absolute; right: -14mm; bottom: -22mm; width: 70mm; height: 70mm; border-radius: 50%; background: #cdb98f; opacity: .9; }
+.cover .sun2 { position: absolute; right: 22mm; bottom: -22mm; width: 38mm; height: 38mm; border-radius: 50%; background: #cdb98f; opacity: .35; }
 .cover small { letter-spacing: .14em; text-transform: uppercase; font-size: 8pt; opacity: .85; }
 .cover h1 { font-size: 25pt; line-height: 1.1; margin: 3mm 0 2mm; font-weight: 800; position: relative; }
 .cover p { margin: 0; font-size: 10.5pt; opacity: .95; position: relative; max-width: 128mm; }
 .wrap { padding: 0 16mm; }
-h2 { font-size: 14.5pt; margin: 8mm 0 2.5mm; padding-bottom: 1.5mm; border-bottom: 2.5px solid #ffb35c; break-after: avoid; }
-h2 .n { color: #e8508f; margin-right: 2mm; }
-h3 { font-size: 10.8pt; margin: 4.5mm 0 1.5mm; color: #3a2a8a; break-after: avoid; }
+h2 { font-size: 14.5pt; margin: 8mm 0 2.5mm; padding-bottom: 1.5mm; border-bottom: 2.5px solid #cdb98f; break-after: avoid; }
+h2 .n { color: #a8915a; margin-right: 2mm; }
+h3 { font-size: 10.8pt; margin: 4.5mm 0 1.5mm; color: #5c5546; break-after: avoid; }
 p { margin: 0 0 2.2mm; }
 ul { margin: 0 0 2.5mm; padding-left: 5mm; }
 li { margin-bottom: 1mm; }
 .lead { font-size: 10.5pt; }
-.box { background: #f4f1fa; border: 1px solid #e0daf0; border-left: 4px solid #e8508f; border-radius: 3mm; padding: 3.5mm 4.5mm; margin: 0 0 3mm; break-inside: avoid; }
-.box.warn { border-left-color: #ffb35c; background: #fff8ee; border-color: #f6dfbc; }
+.box { background: #f4f1ea; border: 1px solid #e3dccb; border-left: 4px solid #a8915a; border-radius: 3mm; padding: 3.5mm 4.5mm; margin: 0 0 3mm; break-inside: avoid; }
+.box.warn { border-left-color: #cdb98f; background: #f7f1e3; border-color: #e3dccb; }
 .box ul { margin-bottom: 0; }
 .box p:last-child { margin-bottom: 0; }
 table { width: 100%; border-collapse: collapse; margin: 1.5mm 0 3.5mm; font-size: 9.2pt; }
-th { text-align: left; background: #1c1240; color: #fff; padding: 1.8mm 2.5mm; font-weight: 600; font-size: 8.6pt; }
-td { padding: 1.8mm 2.5mm; border-bottom: 1px solid #e6e1f2; vertical-align: top; }
+th { text-align: left; background: #0b0b0f; color: #fff; padding: 1.8mm 2.5mm; font-weight: 600; font-size: 8.6pt; }
+td { padding: 1.8mm 2.5mm; border-bottom: 1px solid #e3dccb; vertical-align: top; }
 tr { break-inside: avoid; }
-tbody tr:nth-child(even) td { background: #faf8fe; }
+tbody tr:nth-child(even) td { background: #faf8f3; }
 td.k { font-weight: 700; white-space: nowrap; }
 .pill { display: inline-block; font-size: 7.6pt; font-weight: 700; padding: .3mm 2mm; border-radius: 10mm; white-space: nowrap; }
 .p-live { background: #d9f4e3; color: #14683a; }
-.p-prev { background: #e6e0ff; color: #3a2a8a; }
+.p-prev { background: #ece6d6; color: #5c5546; }
 .p-plan { background: #ececf1; color: #555069; }
 .p-open { background: #ffe3ec; color: #b3265a; }
 .p-done { background: #d9f4e3; color: #14683a; }
 .p-wait { background: #fff0d1; color: #8a5a00; }
-.grp { background: #ece8f7 !important; font-weight: 700; color: #3a2a8a; font-size: 8.8pt; }
-.small { font-size: 8.4pt; color: #5d5580; }
+.grp { background: #efe9da !important; font-weight: 700; color: #5c5546; font-size: 8.8pt; }
+.small { font-size: 8.4pt; color: #6b6b76; }
 .kpis { display: flex; gap: 3mm; margin: 0 0 3.5mm; }
-.kpi { flex: 1; background: #fff; border: 1px solid #e0daf0; border-radius: 3mm; padding: 3mm; text-align: center; break-inside: avoid; }
-.kpi b { display: block; font-size: 17pt; color: #e8508f; line-height: 1.1; }
-.kpi span { font-size: 8pt; color: #5d5580; }
+.kpi { flex: 1; background: #fff; border: 1px solid #e3dccb; border-radius: 3mm; padding: 3mm; text-align: center; break-inside: avoid; }
+.kpi b { display: block; font-size: 17pt; color: #a8915a; line-height: 1.1; }
+.kpi span { font-size: 8pt; color: #6b6b76; }
 .q { counter-reset: q; }
-.q tr td:first-child { width: 8mm; font-weight: 800; color: #e8508f; }
+.q tr td:first-child { width: 8mm; font-weight: 800; color: #a8915a; }
 .logos { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 3.5mm; margin: 2mm 0 3mm; }
-.lg { border: 1px solid #e0daf0; border-radius: 3mm; padding: 2.5mm; break-inside: avoid; }
-.lg h4 { margin: 0 0 1mm; font-size: 9.6pt; } .lg h4 span { color: #e8508f; }
+.lg { border: 1px solid #e3dccb; border-radius: 3mm; padding: 2.5mm; break-inside: avoid; }
+.lg h4 { margin: 0 0 1mm; font-size: 9.6pt; } .lg h4 span { color: #a8915a; }
 .lg .row { display: flex; gap: 2mm; }
 .lg .a, .lg .b { flex: 1; border-radius: 2mm; display: flex; align-items: center; justify-content: center; padding: 1.5mm; height: 17mm; }
-.lg .a { background: #fff; border: 1px solid #e0daf0; } .lg .b { background: #17122b; }
+.lg .a { background: #fff; border: 1px solid #e3dccb; } .lg .b { background: #0b0b0f; }
 .lg svg { max-width: 100%; max-height: 100%; width: 14mm; height: 14mm; }
 .lg.wm svg { width: 30mm; }
-.lg p { font-size: 7.8pt; color: #5d5580; margin: 1.5mm 0 0; line-height: 1.35; }
+.lg p { font-size: 7.8pt; color: #6b6b76; margin: 1.5mm 0 0; line-height: 1.35; }
 .form td { height: 9mm; }
 .opt { white-space: nowrap; display: inline-block; margin-right: 2mm; }
-.chk { display: inline-block; width: 3.2mm; height: 3.2mm; border: 1.3px solid #1c1240; border-radius: .6mm; margin-right: 1.3mm; vertical-align: -.5mm; }
-.line { border-bottom: 1px solid #b9b2d3; height: 7mm; margin-bottom: 1mm; }
+.chk { display: inline-block; width: 3.2mm; height: 3.2mm; border: 1.3px solid #0b0b0f; border-radius: .6mm; margin-right: 1.3mm; vertical-align: -.5mm; }
+.line { border-bottom: 1px solid #cfc8b6; height: 7mm; margin-bottom: 1mm; }
 .pb { break-before: page; }
-.foot-note { font-size: 8pt; color: #5d5580; margin-top: 3mm; }
+.foot-note { font-size: 8pt; color: #6b6b76; margin-top: 3mm; }
 """+"""
-.lg2{display:grid;grid-template-columns:repeat(4,1fr);gap:3mm;margin:2mm 0 3mm}.lg2 div{border:1px solid #e0daf0;border-radius:3mm;padding:2mm;text-align:center;font-size:8pt;color:#5d5580;break-inside:avoid}.lg2 img{width:100%;border-radius:2mm;display:block;margin-bottom:1.5mm}.lg2 b{display:block;color:#1c1240;font-size:9pt}
+.lg2{display:grid;grid-template-columns:repeat(4,1fr);gap:3mm;margin:2mm 0 3mm}.lg2 div{border:1px solid #e3dccb;border-radius:3mm;padding:2mm;text-align:center;font-size:8pt;color:#6b6b76;break-inside:avoid}.lg2 img{width:100%;border-radius:2mm;display:block;margin-bottom:1.5mm}.lg2 b{display:block;color:#0b0b0f;font-size:9pt}
 """
 def img(n):
     d=base64.b64encode(open(f"/home/claude/bpb/public/{n}/logo.svg","rb").read()).decode()
@@ -132,7 +132,7 @@ HTML=f"""<!doctype html><html lang="de"><head><meta charset="utf-8"><title>Proje
 
 </div></body></html>"""
 open("projektstatus.html","w").write(HTML)
-footer=f"""<div style="width:100%;font-family:Inter,Arial,sans-serif;font-size:7.5pt;color:#7b7399;padding:0 16mm;display:flex;justify-content:space-between;"><span>BierbaumPerformanceBrothers · Projektstatus · Stand {STAND}</span><span>Seite <span class="pageNumber"></span> von <span class="totalPages"></span></span></div>"""
+footer=f"""<div style="width:100%;font-family:Inter,Arial,sans-serif;font-size:7.5pt;color:#6b6b76;padding:0 16mm;display:flex;justify-content:space-between;"><span>BierbaumPerformanceBrothers · Projektstatus · Stand {STAND}</span><span>Seite <span class="pageNumber"></span> von <span class="totalPages"></span></span></div>"""
 import os
 with sync_playwright() as p:
     b=p.chromium.launch();pg=b.new_page();pg.goto("file://"+os.getcwd()+"/projektstatus.html")
