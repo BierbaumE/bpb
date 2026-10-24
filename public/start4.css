@@ -53,3 +53,4 @@ html,body.t-dunkel{overflow-x:clip}
 @media(max-width:600px){.w{padding:0 20px}.nav nav a:not(.pill){display:none}.cta{padding:28px}}
 
 @media(max-width:600px){.cta a[href^="mailto:"]{font-size:3.7vw;overflow-wrap:anywhere}}
+.bro .av{width:64px;height:64px;border-radius:50%;margin-bottom:12px;padding:0;border:2px solid var(--ka);background:radial-gradient(circle at 30% 25%,var(--kl),var(--kb));color:var(--ka);display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:800;letter-spacing:-.02em}
